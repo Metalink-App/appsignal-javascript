@@ -1,4 +1,4 @@
-import https from "https"
+let request = require("native-request")
 import { Transport } from "../interfaces/transport"
 
 export class NodeTransport implements Transport {
@@ -18,9 +18,9 @@ export class NodeTransport implements Transport {
     }
 
     return new Promise((resolve, reject) => {
-      const req = https
-        .request(this.url, options, () => {})
-        .on("error", error => reject(error))
+      const req = request
+        .request(this.url, {}, () => {})
+        .on("error", (error: any) => reject(error))
 
       req.write(data)
       req.end()

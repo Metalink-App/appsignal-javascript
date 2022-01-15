@@ -27,6 +27,7 @@
   "dependencies": {
     "@appsignal/core": "=1.1.16",
     "@appsignal/types": "=2.1.7",
+    "native-request": "^1.1.0",
     "tslib": "^2.3.0"
   },
   "browser": {
