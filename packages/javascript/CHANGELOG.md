@@ -1,5 +1,11 @@
 # AppSignal for JavaScript changelog
 
+## 1.3.24
+
+### Fixed
+
+- [1e9a7b3](https://github.com/Metalink-App/appsignal-javascript/commit/1e9a7b377af094683cfdf72e6fbd3274a7bf53db) patch - Replace library
+
 ## 1.3.23
 
 ### Fixed
