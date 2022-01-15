@@ -1,5 +1,5 @@
 ---
 language: nodejs
 npm_client: yarn
-repo: "https://github.com/appsignal/appsignal-javascript"
+repo: "https://github.com/Metalink-App/appsignal-javascript"
 packages_dir: packages
