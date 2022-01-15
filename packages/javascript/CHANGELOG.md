@@ -1,5 +1,11 @@
 # AppSignal for JavaScript changelog
 
+## 1.3.23
+
+### Fixed
+
+- [3582b4d](https://github.com/Metalink-App/appsignal-javascript/commit/3582b4deb3bea3b62364b542769fda32c12c31d4) patch - Use backend/frontend compatible library for making request
+
 ## 1.3.21
 
 ### Changed
