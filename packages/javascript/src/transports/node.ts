@@ -1,5 +1,7 @@
-let request = require("native-request")
+import { Http, HttpRequestOptions } from "node-https"
 import { Transport } from "../interfaces/transport"
+
+const http = new Http()
 
 export class NodeTransport implements Transport {
   public url: string
@@ -9,7 +11,7 @@ export class NodeTransport implements Transport {
   }
 
   public send(data: string): Promise<any> {
-    const options = {
+    const options: HttpRequestOptions = {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -17,15 +19,6 @@ export class NodeTransport implements Transport {
       }
     }
 
-    return new Promise((resolve, reject) => {
-      const req = request
-        .request(this.url, {}, () => {})
-        .on("error", (error: any) => reject(error))
-
-      req.write(data)
-      req.end()
-
-      resolve({})
-    })
+    return http.request(this.url, "POST", options)
   }
 }
